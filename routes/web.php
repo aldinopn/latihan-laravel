@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,5 +47,11 @@ Route::get('/contact', function () {
         "title" => "Contact",
         "Judul" => "Halaman Contact"
     ]);
+});
+
+Route::get('/profile', function () {
+    $profile = DB::table('profile')->get();
+    return view('profile',compact("profile")
+    );
 });
 
