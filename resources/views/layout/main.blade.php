@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('adminLTE')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="{{asset('adminLTE')}}/plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="{{asset('adminLTE')}}/plugins/summernote/summernote-bs4.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -28,7 +29,12 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/contact" class="nav-link">Contact</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ route('logout') }}" class="nav-link">Logout</a>
+      </li>
+    </li>
     </ul>
+    
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -108,13 +114,14 @@
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-item">
-                <a href="/profile" class="nav-link">
+                <a href="/cast" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
-                    Profile
+                    cast
                   </p>
                 </a>
               </li>
+              
         
       </nav>
     </div>
@@ -126,13 +133,7 @@
           <div class="col-sm-6">
             <h1></h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#"></a></li>
-              <li class="breadcrumb-item active"></li>
-            </ol>
-          </div>
-        </div>
+         
       </div><!-- /.container-fluid -->
     </section>
     <section class="content">
@@ -155,6 +156,7 @@
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
+
 <script src="{{asset('adminLTE')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="{{asset('adminLTE')}}/plugins/chart.js/Chart.min.js"></script>
 <script src="{{asset('adminLTE')}}/plugins/sparklines/sparkline.js"></script>
